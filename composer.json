@@ -1,0 +1,49 @@
+{
+    "name": "laravel-notification-channels/line",
+    "description": "LINE Notifications Channel for Laravel",
+    "homepage": "https://github.com/laravel-notification-channels/line",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leo Chien",
+            "email": "s950329@hotmail.com",
+            "homepage": "https://google.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "illuminate/notifications": "~10.0 || ~11.0",
+        "illuminate/support": "~10.0 || ~11.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Line\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Line\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-text --coverage-clover=coverage.clover"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\Line\\LineServiceProvider"
+            ]
+        }
+    }
+}
