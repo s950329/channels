@@ -2,11 +2,11 @@
 
 namespace NotificationChannels\Line;
 
-use GuzzleHttp\Psr7\Response;
-use NotificationChannels\Line\Exceptions\CouldNotSendNotification;
-use Illuminate\Notifications\Notification;
-use GuzzleHttp\Exception\ClientException;
 use Exception;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Psr7\Response;
+use Illuminate\Notifications\Notification;
+use NotificationChannels\Line\Exceptions\CouldNotSendNotification;
 
 class LineChannel
 {
@@ -21,10 +21,10 @@ class LineChannel
     /**
      * Send the given notification.
      *
-     * @param mixed $notifiable
-     * @param \Illuminate\Notifications\Notification $notification
+     * @param  mixed  $notifiable
+     * @param  \Illuminate\Notifications\Notification $notification
      *
-     * @throws \NotificationChannels\:channel_namespace\Exceptions\CouldNotSendNotification
+     * @throws \NotificationChannels\Line\Exceptions\CouldNotSendNotification
      */
     public function send($notifiable, Notification $notification)
     {
